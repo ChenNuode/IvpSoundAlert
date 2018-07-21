@@ -1,0 +1,9 @@
+<resources>
+	<string name="app_name">Pitch Buzz</string>
+	<string name="action_settings">Settings</string>
+	<string name="action_authenticate">Authenticate Buzzer</string>
+	<string name="switch_pitch">Pitch</string>
+	<string name="switch_spl">Sound Pressure</string>
+	<string name="pitch_label">Pitch (Hz)</string>
+	<string name="spl_label">Sound Pressure (N/m<sup>2</sup>)</string>
+</resources>

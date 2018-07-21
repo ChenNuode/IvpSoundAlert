@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	app:layout_behavior="@string/appbar_scrolling_view_behavior"
+	tools:context=".MainActivity"
+	tools:showIn="@layout/activity_main">
+
+	<sg.edu.ri.ivpsoundalert.Chart
+		android:id="@+id/chart"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHeight_percent="0.6"/>
+
+	<android.support.v7.widget.AppCompatImageView
+		android:id="@+id/watch"
+		android:layout_width="60dp"
+		android:layout_height="60dp"
+		android:layout_marginTop="32dp"
+		app:srcCompat="@drawable/ic_watch_black_24dp"
+		app:tint="@color/colorWatchNone"
+		app:layout_constraintTop_toBottomOf="@id/chart"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"/>
+
+	<ProgressBar
+		android:id="@+id/scanning"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toTopOf="@id/watch"
+		app:layout_constraintBottom_toBottomOf="@id/watch"
+		app:layout_constraintStart_toStartOf="@id/watch"
+		app:layout_constraintEnd_toEndOf="@id/watch"
+		android:indeterminate="true"
+		android:visibility="gone"/>
+
+	<TextView
+		android:id="@+id/watchStatus"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		app:layout_constraintTop_toBottomOf="@id/watch"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:textColor="?android:attr/textColorSecondary"/>
+
+</android.support.constraint.ConstraintLayout>

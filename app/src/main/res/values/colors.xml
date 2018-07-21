@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="colorPrimary">#008577</color>
+	<color name="colorPrimaryDark">#00574B</color>
+	<color name="colorSecondary">#FFD600</color>
+	<color name="colorAccent">@color/colorPrimaryDark</color>
+	<color name="colorPitch">@color/colorPrimary</color>
+	<color name="colorSpl">@color/colorSecondary</color>
+
+	<color name="colorFabOnIcon">#FFFFFF</color>
+	<color name="colorFabOnBackground">@color/colorSecondary</color>
+	<color name="colorFabOffIcon">#FFFFFF</color>
+	<color name="colorFabOffBackground">@android:color/darker_gray</color>
+
+	<color name="colorWatchNone">#EEEEEE</color>
+	<color name="colorWatchFound">@android:color/black</color>
+	<color name="colorWatchBuzzing">#FF5722</color>
+
+</resources>

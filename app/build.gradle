@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+  compileSdkVersion 28
+  defaultConfig {
+    applicationId "sg.edu.ri.ivpsoundalert"
+    minSdkVersion 21
+    targetSdkVersion 28
+    versionCode 1
+    versionName "1.0"
+
+	  testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+	  vectorDrawables.useSupportLibrary = true
+	  // If you do enable multidex, you must also set minSdkVersion to 21 or higher.
+	  multiDexEnabled false
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_8
+		targetCompatibility JavaVersion.VERSION_1_8
+	}
+}
+
+dependencies {
+	implementation fileTree(include: ['*.jar'], dir: 'libs')
+	androidTestImplementation('com.android.support.test.espresso:espresso-core:2.3-alpha', {
+		exclude group: 'com.android.support', module: 'support-annotations'
+		exclude group: 'com.google.code.findbugs'
+	})
+	implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+	implementation 'com.android.support:appcompat-v7:28.0.0-alpha3'
+	implementation 'com.android.support:support-v4:28.0.0-alpha3'
+	implementation 'com.android.support:support-vector-drawable:28.0.0-alpha3'
+	implementation 'com.android.support:design:28.0.0-alpha3'
+	implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+	testImplementation 'junit:junit:4.12'
+
+	implementation 'com.github.florent37:runtime-permission-kotlin:1.0.1'
+	implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+	implementation files('libs/TarsosDSP-Android-2.4.jar')
+
+	implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+	implementation 'com.jakewharton.rxrelay2:rxrelay:2.0.0'
+	implementation 'io.reactivex.rxjava2:rxjava:2.1.16'
+
+	implementation 'com.daasuu:EasingInterpolator:1.0.0'
+}
+
+kapt {
+	generateStubs = true
+	useBuildCache = true
+}
+
+androidExtensions {
+	// https://github.com/Kotlin/KEEP/blob/master/proposals/android-extensions-entity-caching.md
+	experimental = true
+}
