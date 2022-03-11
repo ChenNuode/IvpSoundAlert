@@ -9,8 +9,8 @@ We hope it benefits:
 - Elderly
 - People wearing headphones
 
-### The app on passive listening mode, when no sound is detected.
-![ AID on neutral](screenshots/AID_neutral.png "AID when no sound is detected")
+#### The app on passive listening mode, when no sound is detected.
+<img src="screenshots/AID_neutral.png" alt="AID when no sound is detected" width="220"/>
 
-### The app on when a "dangerous" sound is detected, both phone and band vibrates
-![ AID on vibrate](screenshots/AID_sound_detected.png "AID when sound is detected")
+#### The app on when a "dangerous" sound is detected, both phone and band vibrates
+<img src="screenshots/AID_sound_detected.png" alt="AID when sound is detected" width="220"/>
